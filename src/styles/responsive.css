@@ -1,0 +1,61 @@
+/* Responsive helpers to ensure forms, images and layout scale on all devices */
+
+/* Use border-box everywhere to avoid unexpected sizing/overflow */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Make media elements fluid */
+img, picture, video, canvas, svg { max-width: 100%; height: auto; display: block; }
+
+/* Prevent long words from overflowing */
+html, body, p, label { overflow-wrap: break-word; word-wrap: break-word; }
+
+/* Ensure form controls can shrink and don't overflow their containers */
+input, textarea, select { width: 100%; max-width: 100%; min-width: 0; }
+button { max-width: 100%; min-width: 0; }
+
+/* Helpful utility: responsive container with side padding */
+.container { width: 100%; max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
+
+/* Row/column helpers when custom layouts are used outside Tailwind */
+.row { display: flex; flex-wrap: wrap; gap: 1rem; }
+.col { flex: 1 1 100%; }
+
+/* Small screens: slightly reduce base font size for better fit */
+@media (max-width: 480px) {
+  :root { --font-size: 14px; }
+  .col { flex-basis: 100%; }
+}
+
+/* Medium screens: allow two-column layouts */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .col-2-md { flex: 1 1 calc(50% - 1rem); }
+}
+
+/* Larger screens: three-up when needed */
+@media (min-width: 1024px) {
+  :root { --font-size: 16px; }
+  .col-3-lg { flex: 1 1 calc(33.333% - 1rem); }
+}
+
+/* Avoid horizontal scroll from fixed-width elements (fallback) */
+html, body { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+/* Make forms and cards not cause overflow */
+.form-wrapper, .card { width: 100%; max-width: 100%; }
+
+/* Tweak for inputs inside flex containers */
+.flex input, .flex textarea { min-width: 0; }
+
+/* Accessibility: increased tap targets on small screens */
+@media (max-width: 480px) {
+  button, .btn { padding: 12px 16px; font-size: 1rem; }
+}
+
+/* Utility to hide overflow on body when modals open */
+.no-scroll { overflow: hidden; }
+
+/* Ensure any table content wraps instead of overflowing */
+table { width: 100%; border-collapse: collapse; }
+th, td { word-break: break-word; }
+
+/* Developer note: add component-specific media queries in component CSS as needed */

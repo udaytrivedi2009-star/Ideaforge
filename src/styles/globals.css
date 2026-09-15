@@ -1,0 +1,3 @@
+footer > .mx-auto > div:first-child {
+	display: none !important;
+}
