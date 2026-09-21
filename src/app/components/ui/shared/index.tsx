@@ -331,7 +331,7 @@ export const Nav = ({ page, setPage, user = null }: { page: Page; setPage: (p: P
             <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
           </div>
           <span className="text-white drop-shadow-[0_0_18px_rgba(190,221,242,0.35)] inline-block whitespace-nowrap">
-            Ideaforge
+            IdeaForge
           </span>
         </button>
 

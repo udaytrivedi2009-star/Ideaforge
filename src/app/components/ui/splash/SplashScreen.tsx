@@ -108,17 +108,17 @@ export const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
 
           {/* IDEAFORGE Text (Emerges from center in Vibrant Light/Electric Blue) */}
           <h1
-            className="text-6xl sm:text-8xl font-black tracking-tight mb-3 uppercase text-center bg-gradient-to-r from-blue-600 via-sky-500 to-cyan-500 bg-clip-text text-transparent drop-shadow-[0_4px_25px_rgba(56,189,248,0.4)]"
+            className="text-6xl sm:text-8xl font-black tracking-tight mb-3 text-center bg-gradient-to-r from-blue-600 via-sky-500 to-cyan-500 bg-clip-text text-transparent drop-shadow-[0_4px_25px_rgba(56,189,248,0.4)]"
             style={{ fontFamily: "'Unbounded', sans-serif" }}
           >
-            IDEAFORGE
+            IdeaForge
           </h1>
 
           {/* Subtitle Tagline */}
           <p
             className="text-sm sm:text-base font-bold tracking-wider max-w-md mb-6 uppercase text-sky-700"
           >
-            AI Startup Exploration & Multi-Agent Engine
+            Turn raw ideas into validated plans
           </p>
 
           {/* Feature Pill Badge */}
